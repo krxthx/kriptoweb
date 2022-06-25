@@ -94,6 +94,51 @@ button {
   font-weight: bold;
 }
 
+li{
+  font-size:2rem!important;
+  line-height: 4rem !important;
+  font-weight:bold;
+  animation: slide-in 1s;
+  cursor:pointer;
+  color:#393939
+}
+
+li p{
+  font-size:1rem!important;
+  font-weight:bold;
+  animation: slide-in 1s;
+  cursor:pointer;
+  color:#393939;
+  
+}
+li:hover{
+  color:#0f0e13
+}
+
+
+@keyframes slide-in{
+   0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+     -webkit-transform:translateX(0%);
+      transform:translateX(0%);
+    }
+  }
+
+  @keyframes slide-out{
+    0% {
+       -webkit-transform: translateX(0%);
+       transform: translateX(0%);
+     }
+     100% {
+      -webkit-transform: translateX(100%);
+       transform: translateX(100%);
+     }
+   }
+ 
+
 
 @media only screen and (max-width: 991px) {
   #headerID {
