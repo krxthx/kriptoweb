@@ -4,16 +4,26 @@ import { BsInfoCircle } from "react-icons/bs"
 
 import { Loader } from './'
 const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border -gray-400 "
+const Input = ({ placeholder, name, type, value, handleChange }) => (
+    <input
+        placeholder={placeholder}
+        type={type}
+        step="0.0001"
+        value={value}
+        onChange={(e) => handleChange(e, name)}
+        className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-black border-none text-sm blue-glassmorphism"
+    />
+);
 const Welcome = () => {
     const connectWallet = () => {
 
     }
     return (
         <div className="flex w-full justify-center items-center">
-            <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-                <div className=" flex flex-1 justofy-start flex-col md:mr-10">
+            <div className="flex md:flex-row flex-col items-start justify-between mf:p-20 py-12 px-4">
+                <div className=" flex flex-1 justofy-start flex-col mf:mr-10">
                     <h1 className="text-3xl sm:text-5xl text-black text-gradient">Send Crypto<br />across the world.</h1>
-                    <p className="text-left mt-5 text-black font-light md:w-9/12 w-11/12 text-base">Explore the crypto world. Buy and sell cryptocurrencies easily on Kriptoweb.</p>
+                    <p className="text-left mt-5 text-black font-light mf:w-9/12 w-11/12 text-base">Explore the crypto world. Buy and sell cryptocurrencies easily on Kriptoweb.</p>
                     <button
                         type="button"
                         onClick={connectWallet}
@@ -29,15 +39,27 @@ const Welcome = () => {
                         <div className={`rounded-br-2xl ${commonStyles}`}>Blockchain</div>
                     </div>
                 </div>
-                <div className="flex flex-col flex-1 items-center justify-start w-fullmd:mt-0 mt-10">
+                <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10">
                     <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
                         <div className="flex justify-between flex-col w-full h-full">
                             <div className="flex justify-between items-start">
                                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center ">
                                     <SiEthereum className="text-white" fontSize={21} />
                                 </div>
+                                <BsInfoCircle fontSize={17} color="#fff" />
+                            </div>
+                            <div>
+                                <p className="text-white font-light text-ms">
+                                    Address
+                                </p>
+                                <p className="text-white font-semibold text-lg mt-1">
+                                    Ethereum
+                                </p>
                             </div>
                         </div>
+                    </div>
+                    <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center white-glassmorphism">
+                        <Input placeholder="Address To" name="addressTo" type="text" handleChange={() => { }} />
                     </div>
                 </div>
 
