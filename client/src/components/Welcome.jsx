@@ -3,7 +3,7 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs"
 
 import { Loader } from './'
-const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border -gray-400 "
+const commonStyles = "min-h-[50px] sm:px-0 px-2 sm:min-w-[100px] flex justify-center items-center border-[0.5px] border -gray-400 "
 const Input = ({ placeholder, name, type, value, handleChange }) => (
     <input
         placeholder={placeholder}
@@ -18,11 +18,17 @@ const Welcome = () => {
     const connectWallet = () => {
 
     }
+    const handleSubmit = () => {
+
+    }
     return (
         <div className="flex w-full justify-center items-center">
-            <div className="flex md:flex-row flex-col items-start justify-between mf:p-20 py-12 px-4">
+            <div className="flex mf:flex-row flex-col items-start justify-between mf:p-20 py-12 px-4">
                 <div className=" flex flex-1 justofy-start flex-col mf:mr-10">
-                    <h1 className="text-3xl sm:text-5xl text-black text-gradient">Send Crypto<br />across the world.</h1>
+                    <h1 className="text-3xl sm:text-5xl text-black text-gradient" style={{
+                        lineHeight:1.2,
+                        fontWeight:'bold'
+                    }}>Send Crypto<br />across the world.</h1>
                     <p className="text-left mt-5 text-black font-light mf:w-9/12 w-11/12 text-base">Explore the crypto world. Buy and sell cryptocurrencies easily on Kriptoweb.</p>
                     <button
                         type="button"
@@ -39,8 +45,8 @@ const Welcome = () => {
                         <div className={`rounded-br-2xl ${commonStyles}`}>Blockchain</div>
                     </div>
                 </div>
-                <div className="flex flex-col flex-1 items-center justify-start w-full md:mt-0 mt-10">
-                    <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
+                <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
+                    <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-80 w-full my-5 eth-card white-glassmorphism">
                         <div className="flex justify-between flex-col w-full h-full">
                             <div className="flex justify-between items-start">
                                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center ">
@@ -60,9 +66,16 @@ const Welcome = () => {
                     </div>
                     <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center white-glassmorphism">
                         <Input placeholder="Address To" name="addressTo" type="text" handleChange={() => { }} />
+                        <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={() => { }} />
+                        <Input placeholder="Keyword (gif)" name="keyword" type="text" handleChange={() => { }} />
+                        <Input placeholder="Message" name="message" type="text" handleChange={() => { }} />
+                        <div className="h-[1px] w-full bg-gray-400 my-2" />
+                        {false ? (<Loader />) : (
+                            <button type="button" onClick={handleSubmit}
+                                className=" bg-[#212121] text-white w-full mt-2 border-none p-2 rounded-full cursor-pointer">Send Now</button>
+                        )}
                     </div>
                 </div>
-
             </div>
         </div >
     );
