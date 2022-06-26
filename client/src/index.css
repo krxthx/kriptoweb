@@ -94,6 +94,15 @@ button {
   font-weight: bold;
 }
 
+
+#showbar{
+  animation: slide-in 1s;
+}
+
+#closebar{
+  animation: slide-out 1s;
+}
+
 li{
   font-size:2rem!important;
   line-height: 4rem !important;

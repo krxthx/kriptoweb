@@ -23,17 +23,16 @@ const Navbar = () => {
                 ))}
                 <li className='bg-[#212121] text-white py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#3e3e3e]'>Login</li>
             </ul> */}
-            <div className="flex relative">
+            <div className="flex relative" >
                 {toggleMenu
                     ? <AiOutlineClose className="text-black text-xl cursor-pointer" onClick={() => setToggleMenu(false)} />
                     : <HiMenu className="text-black text-lg cursor-pointer" onClick={() => setToggleMenu(true)} />}
                 {toggleMenu && (
                     <ul
                         className='z-10 fixed top-0 -right-2 p-3 w-full h-screen shadow-2xl list-none 
-                        flex flex-col justify-start items-end rounded-md bg-white'
-                    >
-                        <li className='text-xl w-full my-2 animate-slide-out'>
-                            <AiOutlineClose  onClick={() => setToggleMenu(false)} />
+                        flex flex-col justify-start items-end rounded-md bg-white' id={setToggleMenu ? "showbar" : "closebar"}>
+                        <li className='text-xl w-full my-2 '>
+                            <AiOutlineClose  onClick={() => setToggleMenu(false)}/>
                         </li>
                         {["Login", "Market", "Exchange", "Tutorial", "Wallet"].map((item, index) => (
                             <NavbarItem key={item + index} title={item} classProps="my-2 text-lg" />
