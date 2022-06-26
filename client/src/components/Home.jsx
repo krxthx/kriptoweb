@@ -16,7 +16,7 @@ const Home = () => {
         }}>
             <div className="flex mf:flex-row flex-col items-start justify-between mf:p-20 py-12 px-4" id="headerID">
                 <div>
-                    <h1 className="text-black text-gradient t-shadow">kriptoweb.</h1>
+                    <h1 className="text-[#393939] t-shadow">kriptoweb.</h1>
                     <p className="text-left text-black font-light md:w-9/12 w-11/12 text-base">Explore the crypto world. Buy and sell cryptocurrencies easily on Kriptoweb.</p>
                     {/* 
                     <button

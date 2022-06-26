@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className="flex relative">
                 {toggleMenu
                     ? <AiOutlineClose className="text-black text-xl cursor-pointer" onClick={() => setToggleMenu(false)} />
-                    : <HiMenu className="text-black text-xl cursor-pointer" onClick={() => setToggleMenu(true)} />}
+                    : <HiMenu className="text-black text-lg cursor-pointer" onClick={() => setToggleMenu(true)} />}
                 {toggleMenu && (
                     <ul
                         className='z-10 fixed top-0 -right-2 p-3 w-full h-screen shadow-2xl list-none 
