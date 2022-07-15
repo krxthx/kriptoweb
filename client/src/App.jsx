@@ -4,11 +4,8 @@ const App = () => {
     <div className="min-h-screen">
       <div className='gradient-bg-welcome'>
         <Navbar />
-
         <Home />
         <Welcome />
-
-
       </div>
       <Services />
       <Transactions />
